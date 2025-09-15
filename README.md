@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently developing PubAnalyzer, a passion project designed to help users navigate and understand scientific literature more effectively.<br><br>👯 I’m eager to collaborate on innovative problem-solving projects, especially those involving data analysis, automation, or AI-driven insights.<br><br>🤝 I’m seeking help on deploying projects to AWS, particularly best practices for scalability, security, and cost efficiency.<br><br>🌱 I’m currently expanding my knowledge in cloud computing, backend development, and scalable architectures to enhance my projects.<br>
+🔭 I’m a recent DePaul University graduate with a Bachelor of Science in Computer Science, focused on software engineering and development. I’m currently a SWE intern at SuperIntro and 1 of 3 creators of [PubAnalyzer](https://pubanalyzer.live), a passion project that helps users navigate and understand scientific literature more effectively.<br><br>🌱 I’m expanding my expertise in cloud computing, backend development, and scalable architectures to strengthen and grow my projects.<br>
 
 
 ## 🌐 Socials:
