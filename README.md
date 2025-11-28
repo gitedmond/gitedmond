@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m a recent DePaul University graduate with a Bachelor of Science in Computer Science, focused on software engineering and development. I’m currently a SWE intern at SuperIntro and 1 of 3 creators of [PubAnalyzer](https://pubanalyzer.live), a passion project that helps users navigate and understand scientific literature more effectively.<br><br>🌱 I’m expanding my expertise in cloud computing, backend development, and scalable architectures to strengthen and grow my projects.<br>
+🔭 I’m a recent DePaul University graduate with a Bachelor of Science in Computer Science, focused on software engineering and development. I’m a previous SWE intern at AI startup SuperIntro and 1 of 3 creators of [PubAnalyzer](https://pubanalyzer.live), a passion project that helps users navigate and understand scientific literature more effectively.<br><br>🌱 I’m expanding my expertise in cloud computing, backend development, and scalable architectures to strengthen and grow my projects.<br>
 
 
 ## 🌐 Socials:
