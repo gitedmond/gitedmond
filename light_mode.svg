@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="540" viewBox="0 0 1080 540" role="img" aria-label="Edmond Abraham's developer profile">
+  <style>
+    .screen { fill: #f6f8fa; }
+    .text { fill: #24292f; font: 14px Consolas, "Courier New", monospace; }
+    .key { fill: #953800; }
+    .value { fill: #0a3069; }
+    .muted { fill: #57606a; }
+    .rule { fill: #d0d7de; }
+    text, tspan { white-space: pre; }
+  </style>
+  <rect class="screen" width="1080" height="540" rx="15"/>
+  <text x="18" y="28" class="text">
+    <tspan x="18" y="28">            .:..</tspan>
+    <tspan x="18" y="45">           %%##@:</tspan>
+    <tspan x="18" y="62">           @@@@@@</tspan>
+    <tspan x="18" y="79">           .@@+#@-...</tspan>
+    <tspan x="18" y="96">         ..:@@+*@@@@@@*..</tspan>
+    <tspan x="18" y="113">       :@%@@@@@@@@@@@@%@@-</tspan>
+    <tspan x="18" y="130">       @@@@@@@@@@@@@@@@@@@</tspan>
+    <tspan x="18" y="147">       @%@@*@@%@@@@@@@-##@-</tspan>
+    <tspan x="18" y="164">      .@%@% .@@@@@@@@@@%*@=</tspan>
+    <tspan x="18" y="181">      *@@@    @@@@@@@@@@%@#</tspan>
+    <tspan x="18" y="198">     +*@@.   ..@@@@*=:=%@@%</tspan>
+    <tspan x="18" y="215">     -*:%-.    @@:-%@@@@@@@@</tspan>
+    <tspan x="18" y="232">    :*%+*@@@@@*#+:%@@@@@@*@@=</tspan>
+    <tspan x="18" y="249">   @@@@@@%#@@@@%@@@@@@@@@@@@@</tspan>
+    <tspan x="18" y="266">   +@@@@@@@@@@@@@@@%@@@@@@@@@*          *</tspan>
+    <tspan x="18" y="283">    +@@@@@@@@@@#       @@@@@*     +%@@@@#</tspan>
+    <tspan x="18" y="300">       .+@@@@##@:      .@@@@   *@@@@@@%</tspan>
+    <tspan x="18" y="317">           %*@%*%#@    :@@@  @@@@%#*%@+</tspan>
+    <tspan x="18" y="334">           @ @@@#%@+ ..@@@#-@@@%%@%%@</tspan>
+    <tspan x="18" y="351">           @@@*#%@%#=%%*@@#@@@@@%%#@@</tspan>
+    <tspan x="18" y="368">         @@%+= -+**@@@%*@%%@@@%%%%#@+</tspan>
+    <tspan x="18" y="385">        *#=*++#%%@@@%%@@@+%@@@@@%#@@</tspan>
+    <tspan x="18" y="402">        @%#@@@@@@@@@@@@@@@@@@@@%@@@         --</tspan>
+    <tspan x="18" y="419">        @#+%%#**%@@@@%%@@@@@@@@@@@        ----</tspan>
+    <tspan x="18" y="436">        @@@**@@@@@@@#*#%@@@+ =@=          ==--</tspan>
+    <tspan x="18" y="453">        -#@@@@@@@@@@%%@@@@@@              ----</tspan>
+    <tspan x="18" y="470">           @@@@@@@@@%%@@@@@@@@#          --=--</tspan>
+    <tspan x="18" y="487">            #@@@@@@@@@@@@@@@@@@          --==-</tspan>
+  </text>
+  <text x="455" y="30" class="text">
+    <tspan x="455" y="30">edmond@gitedmond</tspan><tspan class="rule">  ─────────────────────────────────────</tspan>
+    <tspan x="455" y="55" class="muted">. </tspan><tspan class="key">Focus</tspan><tspan class="muted">:       ........................ </tspan><tspan class="value">Full-stack apps, automation, data tools</tspan>
+    <tspan x="455" y="77" class="muted">. </tspan><tspan class="key">Interests</tspan><tspan class="muted">:   ........................ </tspan><tspan class="value">Open source, self-hosting, observability</tspan>
+    <tspan x="455" y="99" class="muted">. </tspan><tspan class="key">Location</tspan><tspan class="muted">:    ............................. </tspan><tspan class="value">Chicago → Charlotte</tspan>
+    <tspan x="455" y="121" class="muted">. </tspan><tspan class="key">Motto</tspan><tspan class="muted">:       ............................... </tspan><tspan class="value">I build at the edge of what I know.</tspan>
+    <tspan x="455" y="143" class="muted">.</tspan>
+    <tspan x="455" y="171" class="key">Languages</tspan><tspan class="muted">  ──────────────────────────────────────</tspan>
+    <tspan x="455" y="195" class="muted">. </tspan><tspan class="key">Programming</tspan><tspan class="muted">: .......................... </tspan><tspan class="value">C++, C#, Java, TypeScript, Python, SQL</tspan>
+    <tspan x="455" y="217" class="muted">. </tspan><tspan class="key">Web</tspan><tspan class="muted">:         .................................. </tspan><tspan class="value">JavaScript, HTML, CSS, JSON</tspan>
+    <tspan x="455" y="239" class="muted">. </tspan><tspan class="key">Tools</tspan><tspan class="muted">:       ................................ </tspan><tspan class="value">Git, GitHub Actions, VS Code</tspan>
+    <tspan x="455" y="261" class="muted">.</tspan>
+    <tspan x="455" y="291" class="key">Contact</tspan><tspan class="muted">    ──────────────────────────────────────</tspan>
+    <tspan x="455" y="315" class="muted">. </tspan><tspan class="key">Email</tspan><tspan class="muted">:       ................................ </tspan><tspan class="value">edmndbusiness@gmail.com</tspan>
+    <tspan x="455" y="337" class="muted">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="muted">:    ..................................... </tspan><tspan class="value">edmond-abraham-9b900a221</tspan>
+    <tspan x="455" y="359" class="muted">.</tspan>
+    <tspan x="455" y="389" class="key">Current Mode</tspan><tspan class="muted"> ──────────────────────────────────────</tspan>
+    <tspan x="455" y="413" class="muted">. </tspan><tspan class="key">Approach</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Follow the problem, not the stack</tspan>
+    <tspan x="455" y="435" class="muted">. </tspan><tspan class="key">Building</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Useful things, one problem at a time</tspan>
+    <tspan x="455" y="457" class="muted">. </tspan><tspan class="key">Learning</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Whatever the next problem requires</tspan>
+  </text>
+</svg>
