@@ -1,0 +1,32 @@
+name: Refresh profile stats
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Refresh SVG figures
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_USER: gitedmond
+        run: python scripts/update_profile_stats.py
+      - name: Commit refreshed figures
+        run: |
+          git diff --quiet || (
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add light_mode.svg dark_mode.svg
+            git commit -m "Refresh profile stats"
+            git push
+          )

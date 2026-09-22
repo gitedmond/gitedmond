@@ -57,9 +57,9 @@
     <tspan x="455" y="315" class="muted">. </tspan><tspan class="key">Email</tspan><tspan class="muted">:       ................................ </tspan><tspan class="value">edmndbusiness@gmail.com</tspan>
     <tspan x="455" y="337" class="muted">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="muted">:    ..................................... </tspan><tspan class="value">edmond-abraham-9b900a221</tspan>
     <tspan x="455" y="359" class="muted">.</tspan>
-    <tspan x="455" y="389" class="key">Current Mode</tspan><tspan class="muted"> ──────────────────────────────────────</tspan>
-    <tspan x="455" y="413" class="muted">. </tspan><tspan class="key">Approach</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Problem-first, stack-agnostic</tspan>
-    <tspan x="455" y="435" class="muted">. </tspan><tspan class="key">Building</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Useful things, one at a time</tspan>
-    <tspan x="455" y="457" class="muted">. </tspan><tspan class="key">Learning</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Whatever the next problem needs</tspan>
+    <tspan x="455" y="389" class="key">GitHub Stats</tspan><tspan class="muted"> ───────────────────────────────────────</tspan>
+    <tspan x="455" y="413" class="muted">. </tspan><tspan class="key">Repositories</tspan><tspan class="muted">: .............................. </tspan><tspan class="value" id="repo_data">45</tspan><tspan class="muted">  |  </tspan><tspan class="key">Stars</tspan><tspan class="muted">: </tspan><tspan class="value" id="star_data">1</tspan>
+    <tspan x="455" y="435" class="muted">. </tspan><tspan class="key">Contributions</tspan><tspan class="muted">: ............................ </tspan><tspan class="value" id="contrib_data">1,818</tspan><tspan class="muted">  |  </tspan><tspan class="key">Followers</tspan><tspan class="muted">: </tspan><tspan class="value" id="follower_data">4</tspan>
+    <tspan x="455" y="457" class="muted">. </tspan><tspan class="key">Profile</tspan><tspan class="muted">: ................................... </tspan><tspan class="value">github.com/gitedmond</tspan>
   </text>
 </svg>
