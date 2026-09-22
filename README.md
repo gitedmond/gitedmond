@@ -10,10 +10,4 @@ Lately, I’ve been contributing to projects including **Apache Arrow**, **Apach
 
 ## 🧰 Current Toolkit
 
-**Core languages:** `C++` · `C#` · `Java` · `TypeScript` · `Python`
-
-**Systems and ecosystems:** `Apache Kafka` · `Apache Arrow` · `Parquet` · `OpenTelemetry` · `.NET`
-
-**Open-source platforms:** `Jellyfin` · `Nextcloud` · `Homarr`
-
-**Tools:** `Git` · `GitHub Actions`
+**Core languages:** `C++` · `C#` · `Java` · `TypeScript` · `Python` · `SQL`
