@@ -7,6 +7,7 @@
     .value { fill: #0a3069; }
     .muted { fill: #57606a; }
     .rule { fill: #d0d7de; }
+    .right { font-size: 13px; }
     text, tspan { white-space: pre; }
   </style>
   <rect class="screen" width="1080" height="540" rx="15"/>
@@ -40,7 +41,7 @@
     <tspan x="18" y="470">           @@@@@@@@@%%@@@@@@@@#          --=--</tspan>
     <tspan x="18" y="487">            #@@@@@@@@@@@@@@@@@@          --==-</tspan>
   </text>
-  <text x="455" y="30" class="text">
+  <text x="455" y="30" class="text right">
     <tspan x="455" y="30">edmond@gitedmond</tspan><tspan class="rule">  ─────────────────────────────────────</tspan>
     <tspan x="455" y="55" class="muted">. </tspan><tspan class="key">Focus</tspan><tspan class="muted">:       ........................ </tspan><tspan class="value">Full-stack apps, automation, data tools</tspan>
     <tspan x="455" y="77" class="muted">. </tspan><tspan class="key">Interests</tspan><tspan class="muted">:   ........................ </tspan><tspan class="value">Open source, self-hosting, observability</tspan>
