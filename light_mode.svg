@@ -46,7 +46,7 @@
     <tspan x="455" y="55" class="muted">. </tspan><tspan class="key">Focus</tspan><tspan class="muted">:       ........................ </tspan><tspan class="value">Full-stack apps, automation, data tools</tspan>
     <tspan x="455" y="77" class="muted">. </tspan><tspan class="key">Interests</tspan><tspan class="muted">:   ........................ </tspan><tspan class="value">Open source, self-hosting, observability</tspan>
     <tspan x="455" y="99" class="muted">. </tspan><tspan class="key">Location</tspan><tspan class="muted">:    ............................. </tspan><tspan class="value">Chicago → Charlotte</tspan>
-    <tspan x="455" y="121" class="muted">. </tspan><tspan class="key">Motto</tspan><tspan class="muted">:       ............................... </tspan><tspan class="value">I build at the edge of what I know.</tspan>
+    <tspan x="455" y="121" class="muted">. </tspan><tspan class="key">Motto</tspan><tspan class="muted">:       ............................... </tspan><tspan class="value">Always learning. Usually building.</tspan>
     <tspan x="455" y="143" class="muted">.</tspan>
     <tspan x="455" y="171" class="key">Languages</tspan><tspan class="muted">  ──────────────────────────────────────</tspan>
     <tspan x="455" y="195" class="muted">. </tspan><tspan class="key">Programming</tspan><tspan class="muted">: .......................... </tspan><tspan class="value">C++, C#, Java, TypeScript, Python, SQL</tspan>
@@ -58,8 +58,8 @@
     <tspan x="455" y="337" class="muted">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="muted">:    ..................................... </tspan><tspan class="value">edmond-abraham-9b900a221</tspan>
     <tspan x="455" y="359" class="muted">.</tspan>
     <tspan x="455" y="389" class="key">Current Mode</tspan><tspan class="muted"> ──────────────────────────────────────</tspan>
-    <tspan x="455" y="413" class="muted">. </tspan><tspan class="key">Approach</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Follow the problem, not the stack</tspan>
-    <tspan x="455" y="435" class="muted">. </tspan><tspan class="key">Building</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Useful things, one problem at a time</tspan>
-    <tspan x="455" y="457" class="muted">. </tspan><tspan class="key">Learning</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Whatever the next problem requires</tspan>
+    <tspan x="455" y="413" class="muted">. </tspan><tspan class="key">Approach</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Problem-first, stack-agnostic</tspan>
+    <tspan x="455" y="435" class="muted">. </tspan><tspan class="key">Building</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Useful things, one at a time</tspan>
+    <tspan x="455" y="457" class="muted">. </tspan><tspan class="key">Learning</tspan><tspan class="muted">:    ................................ </tspan><tspan class="value">Whatever the next problem needs</tspan>
   </text>
 </svg>
