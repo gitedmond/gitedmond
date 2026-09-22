@@ -43,23 +43,29 @@
   </text>
   <text x="455" y="30" class="text right">
     <tspan x="455" y="30">edmond@gitedmond</tspan><tspan class="rule">  ─────────────────────────────────────</tspan>
-    <tspan x="455" y="55" class="muted">. </tspan><tspan class="key">Focus</tspan><tspan class="muted">:       ........................ </tspan><tspan class="value">Full-stack apps, automation, data tools</tspan>
-    <tspan x="455" y="77" class="muted">. </tspan><tspan class="key">Interests</tspan><tspan class="muted">:   ........................ </tspan><tspan class="value">Open source, self-hosting, observability</tspan>
-    <tspan x="455" y="99" class="muted">. </tspan><tspan class="key">Location</tspan><tspan class="muted">:    ............................. </tspan><tspan class="value">Chicago → Charlotte</tspan>
-    <tspan x="455" y="121" class="muted">. </tspan><tspan class="key">Motto</tspan><tspan class="muted">:       ............................... </tspan><tspan class="value">Always learning. Usually building.</tspan>
-    <tspan x="455" y="143" class="muted">.</tspan>
-    <tspan x="455" y="171" class="key">Languages</tspan><tspan class="muted">  ──────────────────────────────────────</tspan>
-    <tspan x="455" y="195" class="muted">. </tspan><tspan class="key">Programming</tspan><tspan class="muted">: .......................... </tspan><tspan class="value">C++, C#, Java, TypeScript, Python, SQL</tspan>
-    <tspan x="455" y="217" class="muted">. </tspan><tspan class="key">Web</tspan><tspan class="muted">:         .................................. </tspan><tspan class="value">JavaScript, HTML, CSS, JSON</tspan>
-    <tspan x="455" y="239" class="muted">. </tspan><tspan class="key">Tools</tspan><tspan class="muted">:       ................................ </tspan><tspan class="value">Git, GitHub Actions, VS Code</tspan>
-    <tspan x="455" y="261" class="muted">.</tspan>
-    <tspan x="455" y="291" class="key">Contact</tspan><tspan class="muted">    ──────────────────────────────────────</tspan>
-    <tspan x="455" y="315" class="muted">. </tspan><tspan class="key">Email</tspan><tspan class="muted">:       ................................ </tspan><tspan class="value">edmndbusiness@gmail.com</tspan>
-    <tspan x="455" y="337" class="muted">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="muted">:    ..................................... </tspan><tspan class="value">edmond-abraham-9b900a221</tspan>
-    <tspan x="455" y="359" class="muted">.</tspan>
-    <tspan x="455" y="389" class="key">GitHub Stats</tspan><tspan class="muted"> ───────────────────────────────────────</tspan>
-    <tspan x="455" y="413" class="muted">. </tspan><tspan class="key">Repositories</tspan><tspan class="muted">: .............................. </tspan><tspan class="value" id="repo_data">27</tspan><tspan class="muted">  |  </tspan><tspan class="key">Stars</tspan><tspan class="muted">: </tspan><tspan class="value" id="star_data">1</tspan>
-    <tspan x="455" y="435" class="muted">. </tspan><tspan class="key">Contributions</tspan><tspan class="muted">: ............................ </tspan><tspan class="value" id="contrib_data">1,818</tspan><tspan class="muted">  |  </tspan><tspan class="key">Followers</tspan><tspan class="muted">: </tspan><tspan class="value" id="follower_data">4</tspan>
-    <tspan x="455" y="457" class="muted">. </tspan><tspan class="key">Profile</tspan><tspan class="muted">: ................................... </tspan><tspan class="value">github.com/gitedmond</tspan>
+    <tspan x="455" y="50" class="muted">. </tspan><tspan class="key">OS</tspan><tspan class="muted">:  .................................... </tspan><tspan class="value">Windows, Linux</tspan>
+    <tspan x="455" y="70" class="muted">. </tspan><tspan class="key">Uptime</tspan><tspan class="muted">:  ................................ </tspan><tspan class="value">[add your current focus]</tspan>
+    <tspan x="455" y="90" class="muted">. </tspan><tspan class="key">Host</tspan><tspan class="muted">:  .................................... </tspan><tspan class="value">[add your role or school]</tspan>
+    <tspan x="455" y="110" class="muted">. </tspan><tspan class="key">Kernel</tspan><tspan class="muted">:  .................................. </tspan><tspan class="value">Full-stack developer</tspan>
+    <tspan x="455" y="130" class="muted">. </tspan><tspan class="key">IDE</tspan><tspan class="muted">:  ..................................... </tspan><tspan class="value">VS Code, IntelliJ IDEA</tspan>
+    <tspan x="455" y="150" class="muted">.</tspan>
+    <tspan x="455" y="170" class="key">Languages</tspan><tspan class="muted">  ──────────────────────────────────────</tspan>
+    <tspan x="455" y="190" class="muted">. </tspan><tspan class="key">Programming</tspan><tspan class="muted">: .......................... </tspan><tspan class="value">C++, C#, Java, TypeScript, Python, SQL</tspan>
+    <tspan x="455" y="210" class="muted">. </tspan><tspan class="key">Computer</tspan><tspan class="muted">: ............................. </tspan><tspan class="value">HTML, CSS, JSON, YAML</tspan>
+    <tspan x="455" y="230" class="muted">. </tspan><tspan class="key">Real</tspan><tspan class="muted">:  ........................................... </tspan><tspan class="value">English, [add another]</tspan>
+    <tspan x="455" y="250" class="muted">.</tspan>
+    <tspan x="455" y="270" class="key">Hobbies</tspan><tspan class="muted">    ──────────────────────────────────────</tspan>
+    <tspan x="455" y="290" class="muted">. </tspan><tspan class="key">Software</tspan><tspan class="muted">: ................................. </tspan><tspan class="value">Open source, automation</tspan>
+    <tspan x="455" y="310" class="muted">. </tspan><tspan class="key">Hardware</tspan><tspan class="muted">: ................................. </tspan><tspan class="value">Homelab, self-hosting</tspan>
+    <tspan x="455" y="330" class="muted">.</tspan>
+    <tspan x="455" y="350" class="key">Contact</tspan><tspan class="muted">    ──────────────────────────────────────</tspan>
+    <tspan x="455" y="370" class="muted">. </tspan><tspan class="key">Email</tspan><tspan class="muted">.Personal</tspan><tspan class="muted">: ............................ </tspan><tspan class="value">your.email@example.com</tspan>
+    <tspan x="455" y="390" class="muted">. </tspan><tspan class="key">Website</tspan><tspan class="muted">: .................................... </tspan><tspan class="value">[add your website]</tspan>
+    <tspan x="455" y="410" class="muted">. </tspan><tspan class="key">Email</tspan><tspan class="muted">.Work</tspan><tspan class="muted">: ................................... </tspan><tspan class="value">[add if wanted]</tspan>
+    <tspan x="455" y="430" class="muted">. </tspan><tspan class="key">LinkedIn</tspan><tspan class="muted">: ................................... </tspan><tspan class="value">[add your handle]</tspan>
+    <tspan x="455" y="450" class="muted">. </tspan><tspan class="key">Discord</tspan><tspan class="muted">: .................................... </tspan><tspan class="value">[add if wanted]</tspan>
+    <tspan x="455" y="470" class="key">GitHub Stats</tspan><tspan class="muted"> ───────────────────────────────────────</tspan>
+    <tspan x="455" y="490" class="muted">. </tspan><tspan class="key">Repos</tspan><tspan class="muted">: ...................................... </tspan><tspan class="value" id="repo_data">45</tspan><tspan class="muted"> {</tspan><tspan class="key">Contributions</tspan><tspan class="muted">: </tspan><tspan class="value" id="contrib_data">1,818</tspan><tspan class="muted">} | </tspan><tspan class="key">Stars</tspan><tspan class="muted">: </tspan><tspan class="value" id="star_data">1</tspan>
+    <tspan x="455" y="510" class="muted">. </tspan><tspan class="key">Commits</tspan><tspan class="muted">: ................................... </tspan><tspan class="value">[coming soon]</tspan><tspan class="muted"> | </tspan><tspan class="key">Followers</tspan><tspan class="muted">: </tspan><tspan class="value" id="follower_data">4</tspan>
   </text>
 </svg>
