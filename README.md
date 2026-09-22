@@ -1,5 +1,10 @@
-# 💫 About Me:
-🔭 1 of 3 creators of [PubAnalyzer](https://pubanalyzer.live), a passion project that helps users navigate and understand scientific literature more effectively.<br><br>🌱 I’m expanding my expertise in cloud computing, backend development, and scalable architectures to strengthen and grow my projects.<br>
+# Hey, I’m Edmond 👋
+
+I’m a software developer passionate about open source and interested in distributed systems, observability, data infrastructure, and self-hosted software.
+
+Lately, I’ve been contributing to projects including **Apache Arrow**, **Apache Kafka**, **OpenTelemetry .NET**, **Jellyfin**, and **Homarr**.
+
+I’m also one of three creators of [PubAnalyzer](https://pubanalyzer.live), a project that helps people navigate and understand scientific literature.
 
 
 ## 🌐 Socials:
