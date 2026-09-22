@@ -21,6 +21,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PROFILE_USER: gitedmond
         run: python scripts/update_profile_stats.py
+      - name: Verify profile cards
+        run: python -m unittest scripts/test_profile_svg.py
       - name: Commit refreshed figures
         run: |
           git diff --quiet || (
