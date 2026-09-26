@@ -29,7 +29,7 @@ class ProfileSvgTests(unittest.TestCase):
             self.assertEqual(actual, render_profile.render_svg(theme, stats))
 
     def test_reference_geometry_and_structure(self) -> None:
-        expected_rows = list(range(30, 240, 20)) + [290, 310, 330, 350, 370, 430, 450, 470, 490]
+        expected_rows = list(range(30, 260, 20)) + [290, 310, 330, 350, 370, 430, 450, 470, 490]
         expected_palettes = {
             "dark": {
                 "background": "#161b22",
@@ -97,6 +97,11 @@ class ProfileSvgTests(unittest.TestCase):
                 if span.attrib.get("x") == "390" and "y" in span.attrib
             ]
             self.assertEqual(right_rows, expected_rows)
+            separator = next(
+                span for span in texts[1].findall("svg:tspan", NS)
+                if span.attrib.get("x") == "390" and span.attrib.get("y") == "190"
+            )
+            self.assertEqual(separator.text, ". ")
             ids = {
                 span.attrib["id"]
                 for span in root.findall(".//svg:tspan", NS)
@@ -106,6 +111,8 @@ class ProfileSvgTests(unittest.TestCase):
             content = "".join(root.itertext())
             self.assertIn("edmond@gitedmond", content)
             self.assertIn("Languages.Programming", content)
+            self.assertIn("Languages.Spoken", content)
+            self.assertNotIn("Languages.Real", content)
             self.assertNotIn("Host:", content)
             self.assertNotIn("Kernel:", content)
             self.assertIn("Email.Personal", content)
