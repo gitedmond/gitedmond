@@ -29,7 +29,7 @@ class ProfileSvgTests(unittest.TestCase):
             self.assertEqual(actual, render_profile.render_svg(theme, stats))
 
     def test_reference_geometry_and_structure(self) -> None:
-        expected_rows = list(range(30, 260, 20)) + [290, 310, 330, 350, 370, 430, 450, 470, 490]
+        expected_rows = list(range(30, 280, 20)) + [310, 330, 350, 370, 390, 450, 470, 490, 510]
         expected_palettes = {
             "dark": {
                 "background": "#161b22",
@@ -113,6 +113,8 @@ class ProfileSvgTests(unittest.TestCase):
             self.assertIn("Languages.Programming", content)
             self.assertIn("Languages.Spoken", content)
             self.assertNotIn("Languages.Real", content)
+            self.assertIn("- Languages", content)
+            self.assertIn("- Hobbies", content)
             self.assertNotIn("Host:", content)
             self.assertNotIn("Kernel:", content)
             self.assertIn("Email.Personal", content)
