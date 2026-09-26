@@ -7,6 +7,7 @@ import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from unittest.mock import patch
 
 
 SCRIPTS = Path(__file__).resolve().parent
@@ -28,7 +29,7 @@ class ProfileSvgTests(unittest.TestCase):
             self.assertEqual(actual, render_profile.render_svg(theme, stats))
 
     def test_reference_geometry_and_structure(self) -> None:
-        expected_rows = list(range(30, 240, 20)) + [290, 310, 330, 350, 410, 430, 450, 470]
+        expected_rows = list(range(30, 240, 20)) + [290, 310, 330, 350, 370, 430, 450, 470, 490]
         expected_palettes = {
             "dark": {
                 "background": "#161b22",
@@ -53,6 +54,12 @@ class ProfileSvgTests(unittest.TestCase):
             "star_data",
             "follower_data_dots",
             "follower_data",
+            "commit_data_dots",
+            "commit_data",
+            "line_data_dots",
+            "line_data",
+            "addition_data",
+            "deletion_data",
         }
 
         trees = {}
@@ -101,11 +108,12 @@ class ProfileSvgTests(unittest.TestCase):
             self.assertIn("Languages.Programming", content)
             self.assertNotIn("Host:", content)
             self.assertNotIn("Kernel:", content)
-            self.assertNotIn("Email.Personal", content)
+            self.assertIn("Email.Personal", content)
+            self.assertLess(content.index("Email.Personal"), content.index("Email.Work"))
             self.assertIn("Hobbies.Life", content)
             self.assertIn("Hobbies.Hardware", content)
-            self.assertIn("Lines of Code on GitHub", content)
-            self.assertEqual(content.count("[pending]"), 4)
+            self.assertIn("Lines Changed", content)
+            self.assertNotIn("[pending]", content)
 
         dark_spans = [
             (node.attrib, node.text)
@@ -123,6 +131,63 @@ class ProfileSvgTests(unittest.TestCase):
         self.assertIn("repositoriesContributedTo", query)
         self.assertIn("includeUserRepositories: false", query)
         self.assertNotIn("contributionsCollection", query)
+        contributed_query = " ".join(update_profile_stats.CONTRIBUTED_QUERY.split())
+        self.assertIn("privacy: PUBLIC", contributed_query)
+        self.assertIn("includeUserRepositories: true", contributed_query)
+        self.assertIn("author: {id: $author}", update_profile_stats.COMMITS_QUERY)
+
+    def test_commit_totals_page_and_deduplicate_public_history(self) -> None:
+        def page(nodes, next_cursor=None):
+            return {
+                "nodes": nodes,
+                "pageInfo": {
+                    "hasNextPage": next_cursor is not None,
+                    "endCursor": next_cursor,
+                },
+            }
+
+        def graphql(query, variables):
+            cursor = variables["cursor"]
+            if query == update_profile_stats.QUERY:
+                nodes = ([{"id": "A", "stargazerCount": 1}] if cursor is None
+                         else [{"id": "B", "stargazerCount": 2}])
+                return {"user": {
+                    "id": "user-id",
+                    "repositories": {"totalCount": 2, **page(nodes, "owner2" if cursor is None else None)},
+                    "repositoriesContributedTo": {"totalCount": 1},
+                    "followers": {"totalCount": 4},
+                }}
+            if query == update_profile_stats.CONTRIBUTED_QUERY:
+                nodes = [{"id": "B" if cursor is None else "C"}]
+                return {"user": {"repositoriesContributedTo": page(
+                    nodes, "contrib2" if cursor is None else None
+                )}}
+            self.assertEqual(query, update_profile_stats.COMMITS_QUERY)
+            self.assertEqual(variables["author"], "user-id")
+            repo = variables["repository"]
+            commits = {
+                ("A", None): ([{"oid": "x", "additions": 2, "deletions": 1}], "hist2"),
+                ("A", "hist2"): ([{"oid": "y", "additions": 5, "deletions": 2}], None),
+                ("B", None): ([{"oid": "x", "additions": 2, "deletions": 1}], None),
+                ("C", None): ([{"oid": "z", "additions": 1, "deletions": 3}], None),
+            }
+            nodes, next_cursor = commits[(repo, cursor)]
+            return {"node": {
+                "isPrivate": False,
+                "defaultBranchRef": {"target": {"history": page(nodes, next_cursor)}},
+            }}
+
+        with patch.object(update_profile_stats, "_graphql", side_effect=graphql):
+            self.assertEqual(update_profile_stats.github_data(), {
+                "repo_data": 2,
+                "contrib_data": 1,
+                "star_data": 3,
+                "follower_data": 4,
+                "commit_data": 3,
+                "line_data": 14,
+                "addition_data": 8,
+                "deletion_data": 6,
+            })
 
     def test_stats_update_is_idempotent_and_preserves_placeholders(self) -> None:
         values = {
@@ -130,6 +195,10 @@ class ProfileSvgTests(unittest.TestCase):
             "contrib_data": 45,
             "star_data": 6,
             "follower_data": 7,
+            "commit_data": 8,
+            "line_data": 21,
+            "addition_data": 13,
+            "deletion_data": 8,
         }
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "card.svg"
@@ -141,7 +210,8 @@ class ProfileSvgTests(unittest.TestCase):
             first = path.read_text(encoding="utf-8")
             self.assertFalse(update_profile_stats.update_svg(path, values))
             self.assertEqual(first, path.read_text(encoding="utf-8"))
-            self.assertEqual(first.count("[pending]"), 4)
+            self.assertNotIn("[pending]", first)
+            self.assertIn('id="line_data">21</tspan>', first)
 
 
 if __name__ == "__main__":

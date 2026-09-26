@@ -35,6 +35,10 @@ DEFAULT_STATS = {
     "contrib_data": 7,
     "star_data": 1,
     "follower_data": 4,
+    "commit_data": 0,
+    "line_data": 0,
+    "addition_data": 0,
+    "deletion_data": 0,
 }
 
 # The original 28-row Daredevil/gargoyle artwork, resampled to Andrew's
@@ -108,6 +112,12 @@ def render_svg(theme_name: str, stats: dict[str, int]) -> str:
     repo_dots = _dots(8, repo)
     star_dots = _dots(16, stars)
     follower_dots = _dots(12, followers)
+    commits = stats["commit_data"]
+    changed = stats["line_data"]
+    additions = stats["addition_data"]
+    deletions = stats["deletion_data"]
+    commit_dots = _dots(20, commits)
+    line_dots = _dots(4, changed)
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="530px" font-size="16px" role="img" aria-label="Edmond Abraham's developer profile">
@@ -143,13 +153,14 @@ text, tspan {{white-space: pre;}}
 <tspan x="390" y="210" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Hardware</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">Homelab, PC building, BLE Beacons</tspan>
 <tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Life</tspan>:<tspan class="cc"> ............................ </tspan><tspan class="value">[add life hobbies]</tspan>
 <tspan x="390" y="290">- Contact</tspan> -——————————————————————————————————————————————-—-
-<tspan x="390" y="310" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Work</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">edmond.abraham@selctive.com</tspan>
-<tspan x="390" y="330" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">Edmond Abraham</tspan>
-<tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Discord</tspan>:<tspan class="cc"> ......................................... </tspan><tspan class="value">3dm0nd.</tspan>
-<tspan x="390" y="410">- GitHub Stats</tspan> -—————————————————————————————————————————-—-
-<tspan x="390" y="430" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots">{repo_dots}</tspan><tspan class="value" id="repo_data">{repo:,}</tspan> {{<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">{contributed:,}</tspan>}} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots">{star_dots}</tspan><tspan class="value" id="star_data">{stars:,}</tspan>
-<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">[pending]</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots">{follower_dots}</tspan><tspan class="value" id="follower_data">{followers:,}</tspan>
-<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc"> .. </tspan><tspan class="value">[pending]</tspan> ( <tspan class="addColor">[pending]++</tspan>, <tspan class="delColor">[pending]--</tspan> )
+<tspan x="390" y="310" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Personal</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">edmndbusiness@gmail.com</tspan>
+<tspan x="390" y="330" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Work</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">edmond.abraham@selctive.com</tspan>
+<tspan x="390" y="350" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">Edmond Abraham</tspan>
+<tspan x="390" y="370" class="cc">. </tspan><tspan class="key">Discord</tspan>:<tspan class="cc"> ......................................... </tspan><tspan class="value">3dm0nd.</tspan>
+<tspan x="390" y="430">- GitHub Stats</tspan> -—————————————————————————————————————————-—-
+<tspan x="390" y="450" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots">{repo_dots}</tspan><tspan class="value" id="repo_data">{repo:,}</tspan> {{<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">{contributed:,}</tspan>}} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots">{star_dots}</tspan><tspan class="value" id="star_data">{stars:,}</tspan>
+<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots">{commit_dots}</tspan><tspan class="value" id="commit_data">{commits:,}</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots">{follower_dots}</tspan><tspan class="value" id="follower_data">{followers:,}</tspan>
+<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Lines Changed</tspan>:<tspan class="cc" id="line_data_dots">{line_dots}</tspan><tspan class="value" id="line_data">{changed:,}</tspan> ( <tspan class="addColor" id="addition_data">{additions:,}</tspan>++, <tspan class="delColor" id="deletion_data">{deletions:,}</tspan>-- )
 </text>
 </svg>
 '''
