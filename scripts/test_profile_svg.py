@@ -29,7 +29,7 @@ class ProfileSvgTests(unittest.TestCase):
             self.assertEqual(actual, render_profile.render_svg(theme, stats))
 
     def test_reference_geometry_and_structure(self) -> None:
-        expected_rows = list(range(30, 280, 20)) + [310, 330, 350, 370, 390, 450, 470, 490, 510]
+        expected_rows = list(range(30, 300, 20)) + [330, 350, 370, 390, 410, 470, 490, 510, 530]
         expected_palettes = {
             "dark": {
                 "background": "#161b22",
@@ -69,7 +69,7 @@ class ProfileSvgTests(unittest.TestCase):
             trees[theme] = tree
             root = tree.getroot()
             self.assertEqual(root.attrib["width"], "985px")
-            self.assertEqual(root.attrib["height"], "530px")
+            self.assertEqual(root.attrib["height"], "550px")
             self.assertEqual(root.attrib["font-size"], "16px")
             self.assertEqual(
                 root.attrib["font-family"], "ConsolasFallback,Consolas,monospace"
@@ -97,11 +97,12 @@ class ProfileSvgTests(unittest.TestCase):
                 if span.attrib.get("x") == "390" and "y" in span.attrib
             ]
             self.assertEqual(right_rows, expected_rows)
-            separator = next(
-                span for span in texts[1].findall("svg:tspan", NS)
-                if span.attrib.get("x") == "390" and span.attrib.get("y") == "190"
-            )
-            self.assertEqual(separator.text, ". ")
+            for y in (110, 210):
+                separator = next(
+                    span for span in texts[1].findall("svg:tspan", NS)
+                    if span.attrib.get("x") == "390" and span.attrib.get("y") == str(y)
+                )
+                self.assertEqual(separator.text, ". ")
             ids = {
                 span.attrib["id"]
                 for span in root.findall(".//svg:tspan", NS)

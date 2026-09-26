@@ -120,7 +120,7 @@ def render_svg(theme_name: str, stats: dict[str, int]) -> str:
     line_dots = _dots(4, changed)
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="530px" font-size="16px" role="img" aria-label="Edmond Abraham's developer profile">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="550px" font-size="16px" role="img" aria-label="Edmond Abraham's developer profile">
 <style>
 @font-face {{
 src: local('Consolas'), local('Consolas Bold');
@@ -136,7 +136,7 @@ size-adjust: 109%;
 .cc {{fill: {theme['muted']};}}
 text, tspan {{white-space: pre;}}
 </style>
-<rect width="985px" height="530px" fill="{theme['background']}" rx="15"/>
+<rect width="985px" height="550px" fill="{theme['background']}" rx="15"/>
 <text x="15" y="30" fill="{theme['text']}" class="ascii">
 {art}
 </text>
@@ -145,24 +145,25 @@ text, tspan {{white-space: pre;}}
 <tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> .................................... </tspan><tspan class="value">Windows 11, Linux</tspan>
 <tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> ......................................... </tspan><tspan class="value">[23 / 5]</tspan>
 <tspan x="390" y="90" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> .............................. </tspan><tspan class="value">VS Code, IntelliJ IDEA</tspan>
-<tspan x="390" y="110">- Languages</tspan> -————————————————————————————————————————————-—-
-<tspan x="390" y="130" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> . </tspan><tspan class="value">C#, Java, TypeScript, Python, SQL</tspan>
-<tspan x="390" y="150" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Computer</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">JavaScript, HTML, CSS, JSON</tspan>
-<tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Spoken</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">English, Arabic</tspan>
-<tspan x="390" y="190" class="cc">. </tspan>
-<tspan x="390" y="210">- Hobbies</tspan> -——————————————————————————————————————————————-—-
-<tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Software</tspan>:<tspan class="cc"> .. </tspan><tspan class="value">Open source, self-hosting, automation</tspan>
-<tspan x="390" y="250" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Hardware</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">Homelab, PC building, BLE Beacons</tspan>
-<tspan x="390" y="270" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Life</tspan>:<tspan class="cc"> ............................ </tspan><tspan class="value">[add life hobbies]</tspan>
-<tspan x="390" y="310">- Contact</tspan> -——————————————————————————————————————————————-—-
-<tspan x="390" y="330" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Personal</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">edmndbusiness@gmail.com</tspan>
-<tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Work</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">edmond.abraham@selctive.com</tspan>
-<tspan x="390" y="370" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">Edmond Abraham</tspan>
-<tspan x="390" y="390" class="cc">. </tspan><tspan class="key">Discord</tspan>:<tspan class="cc"> ......................................... </tspan><tspan class="value">3dm0nd.</tspan>
-<tspan x="390" y="450">- GitHub Stats</tspan> -—————————————————————————————————————————-—-
-<tspan x="390" y="470" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots">{repo_dots}</tspan><tspan class="value" id="repo_data">{repo:,}</tspan> {{<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">{contributed:,}</tspan>}} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots">{star_dots}</tspan><tspan class="value" id="star_data">{stars:,}</tspan>
-<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots">{commit_dots}</tspan><tspan class="value" id="commit_data">{commits:,}</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots">{follower_dots}</tspan><tspan class="value" id="follower_data">{followers:,}</tspan>
-<tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Lines Changed</tspan>:<tspan class="cc" id="line_data_dots">{line_dots}</tspan><tspan class="value" id="line_data">{changed:,}</tspan> ( <tspan class="addColor" id="addition_data">{additions:,}</tspan>++, <tspan class="delColor" id="deletion_data">{deletions:,}</tspan>-- )
+<tspan x="390" y="110" class="cc">. </tspan>
+<tspan x="390" y="130">- Languages</tspan> -————————————————————————————————————————————-—-
+<tspan x="390" y="150" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> . </tspan><tspan class="value">C#, Java, TypeScript, Python, SQL</tspan>
+<tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Computer</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">JavaScript, HTML, CSS, JSON</tspan>
+<tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Spoken</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">English, Arabic</tspan>
+<tspan x="390" y="210" class="cc">. </tspan>
+<tspan x="390" y="230">- Hobbies</tspan> -——————————————————————————————————————————————-—-
+<tspan x="390" y="250" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Software</tspan>:<tspan class="cc"> .. </tspan><tspan class="value">Open source, self-hosting, automation</tspan>
+<tspan x="390" y="270" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Hardware</tspan>:<tspan class="cc"> ...... </tspan><tspan class="value">Homelab, PC building, BLE Beacons</tspan>
+<tspan x="390" y="290" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Life</tspan>:<tspan class="cc"> ............................ </tspan><tspan class="value">[add life hobbies]</tspan>
+<tspan x="390" y="330">- Contact</tspan> -——————————————————————————————————————————————-—-
+<tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Personal</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">edmndbusiness@gmail.com</tspan>
+<tspan x="390" y="370" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Work</tspan>:<tspan class="cc"> .................. </tspan><tspan class="value">edmond.abraham@selctive.com</tspan>
+<tspan x="390" y="390" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">Edmond Abraham</tspan>
+<tspan x="390" y="410" class="cc">. </tspan><tspan class="key">Discord</tspan>:<tspan class="cc"> ......................................... </tspan><tspan class="value">3dm0nd.</tspan>
+<tspan x="390" y="470">- GitHub Stats</tspan> -—————————————————————————————————————————-—-
+<tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots">{repo_dots}</tspan><tspan class="value" id="repo_data">{repo:,}</tspan> {{<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">{contributed:,}</tspan>}} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots">{star_dots}</tspan><tspan class="value" id="star_data">{stars:,}</tspan>
+<tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Commits</tspan>:<tspan class="cc" id="commit_data_dots">{commit_dots}</tspan><tspan class="value" id="commit_data">{commits:,}</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots">{follower_dots}</tspan><tspan class="value" id="follower_data">{followers:,}</tspan>
+<tspan x="390" y="530" class="cc">. </tspan><tspan class="key">Lines Changed</tspan>:<tspan class="cc" id="line_data_dots">{line_dots}</tspan><tspan class="value" id="line_data">{changed:,}</tspan> ( <tspan class="addColor" id="addition_data">{additions:,}</tspan>++, <tspan class="delColor" id="deletion_data">{deletions:,}</tspan>-- )
 </text>
 </svg>
 '''
