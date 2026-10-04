@@ -29,7 +29,9 @@ class ProfileSvgTests(unittest.TestCase):
             self.assertEqual(actual, render_profile.render_svg(theme, stats))
 
     def test_reference_geometry_and_structure(self) -> None:
-        expected_rows = list(range(30, 300, 20)) + [330, 350, 370, 390, 410, 470, 490, 510, 530]
+        expected_rows = [
+            y for y in range(30, 300, 20) if y not in (110, 210)
+        ] + [330, 350, 370, 390, 410, 470, 490, 510, 530]
         expected_palettes = {
             "dark": {
                 "background": "#161b22",
@@ -97,12 +99,6 @@ class ProfileSvgTests(unittest.TestCase):
                 if span.attrib.get("x") == "390" and "y" in span.attrib
             ]
             self.assertEqual(right_rows, expected_rows)
-            for y in (110, 210):
-                separator = next(
-                    span for span in texts[1].findall("svg:tspan", NS)
-                    if span.attrib.get("x") == "390" and span.attrib.get("y") == str(y)
-                )
-                self.assertEqual(separator.text, ". ")
             ids = {
                 span.attrib["id"]
                 for span in root.findall(".//svg:tspan", NS)
@@ -121,6 +117,8 @@ class ProfileSvgTests(unittest.TestCase):
             self.assertIn("Email.Personal", content)
             self.assertLess(content.index("Email.Personal"), content.index("Email.Work"))
             self.assertIn("Hobbies.Life", content)
+            self.assertIn("Weightlifting, Cooking, Rock Climbing", content)
+            self.assertNotIn("[add life hobbies]", content)
             self.assertIn("Hobbies.Hardware", content)
             self.assertIn("Lines Changed", content)
             self.assertNotIn("[pending]", content)
