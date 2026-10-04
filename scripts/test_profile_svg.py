@@ -30,8 +30,9 @@ class ProfileSvgTests(unittest.TestCase):
 
     def test_reference_geometry_and_structure(self) -> None:
         expected_rows = [
-            y for y in range(30, 300, 20) if y not in (110, 210)
-        ] + [330, 350, 370, 390, 410, 470, 490, 510, 530]
+            30, 50, 70, 90, 130, 150, 170, 210, 230, 250, 270,
+            310, 330, 350, 370, 410, 430, 450, 470,
+        ]
         expected_palettes = {
             "dark": {
                 "background": "#161b22",
@@ -115,7 +116,9 @@ class ProfileSvgTests(unittest.TestCase):
             self.assertNotIn("Host:", content)
             self.assertNotIn("Kernel:", content)
             self.assertIn("Email.Personal", content)
-            self.assertLess(content.index("Email.Personal"), content.index("Email.Work"))
+            self.assertNotIn("Email.Work", content)
+            self.assertNotIn("edmond.abraham@selctive.com", content)
+            self.assertNotIn("Languages.Computer", content)
             self.assertIn("Hobbies.Life", content)
             self.assertIn("Weightlifting, Cooking, Rock Climbing", content)
             self.assertNotIn("[add life hobbies]", content)
